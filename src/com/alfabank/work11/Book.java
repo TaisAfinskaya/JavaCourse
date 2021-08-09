@@ -25,6 +25,10 @@ public class Book {
         this.page = page;
     }
 
+    public void increaseCostToPercent(int percent){
+        cost = cost + cost * percent / 100;
+    }
+
     public int getId() {
         return id;
     }
