@@ -7,23 +7,21 @@ public class Employee {
     private String telephone;
     private static int numberOfEmployees;
 
+    {
+        numberOfEmployees++;
+    }
+
     public Employee(String firstName, String lastName, String occupation) {
-        this();
         this.firstName = firstName;
         this.lastName = lastName;
         this.occupation = occupation;
     }
 
     public Employee(String firstName, String lastName, String occupation, String telephone) {
-        this();
         this.firstName = firstName;
         this.lastName = lastName;
         this.occupation = occupation;
         this.telephone = telephone;
-    }
-
-    public Employee() {
-        numberOfEmployees++;
     }
 
     public String getFirstName() {
@@ -53,11 +51,13 @@ public class Employee {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", occupation='" + occupation + '\'' ;
+
                 if(telephone != null) {
                     out += ", telephone='" + telephone + '\'';
                 }
 
-         out +=    '}';
+                out +=    '}';
+
                 return out;
     }
 }
